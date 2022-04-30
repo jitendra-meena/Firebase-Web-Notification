@@ -11,8 +11,9 @@ class RegisterInfo(models.Model):
     gender = models.CharField(max_length=30,blank=True)
     county = models.CharField(max_length=20,blank=True)
     code_info = models.CharField(max_length=70)
+    notification = models.BooleanField(default=True)
 
 
-    def __str__(self) -> str:
-        self.name
+    def __str__(self):
+        return self.name
 
