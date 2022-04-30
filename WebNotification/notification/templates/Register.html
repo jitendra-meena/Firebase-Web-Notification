@@ -21,7 +21,9 @@
     <!-- Vendor CSS-->
     <link href="/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="/static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-messaging.js"></script>
     <!-- Main CSS-->
     <link href="/static/css/main.css" rel="stylesheet" media="all">
 </head>
@@ -85,6 +87,56 @@
         </div>
     </div>
 
+    
+    <script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyCJD0-w89XcoKXIS5RKCJjFGwdiYvLF9UQ",
+        authDomain: "web-noti-ffa7c.firebaseapp.com",
+        projectId: "web-noti-ffa7c",
+        storageBucket: "web-noti-ffa7c.appspot.com",
+        messagingSenderId: "581835456145",
+        appId: "1:581835456145:web:40046e026a6f16e5e54930",
+        measurementId: "G-DFX484N9LS"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      
+        const messaging = firebase.messaging();
+        console.log(messaging.getToken())
+        messaging.getToken({ vapidKey: 'BKoLFLcs8ZBtqZ6fJrP540bh7-BulSfGbF42pI1xV_EXCZikpFXpDQjHUZNbtbrue86Jr2AkPxZ_p_FV4CEgRqY' }).then((currentToken) => {
+        if (currentToken) {
+          
+          console.log(currentToken)
+        } else {
+          console.log('No registration token available. Request permission to generate one.');
+       
+        }
+      }).catch((err) => {
+        console.log('An error occurred while retrieving token. ', err);
+      });
+      
+      
+        messaging
+         .requestPermission()
+         .then(function () {
+           console.log("Notification permission granted.");
+           return messaging.getToken()
+         })
+         .catch(function (err) {
+         console.log("Unable to get permission to notify.", err);
+       });
+      
+      
+        messaging.onMessage((payload) => {
+        console.log('Message received. ', payload);
+       
+      });
+      
+      
+      
+      </script>
+     
     <!-- Jquery JS-->
     <script src="/static/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->

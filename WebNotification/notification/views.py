@@ -33,12 +33,13 @@ def send_notification(registration_ids , message_title , message_desc):
 
 
 
-
+def register(request):
+    return render(request,'Register.html')
 
 
 
 def index(request):
-    return render(request , 'index.html')
+    return render(request , 'Register.html')
 
 def send(request):
     resgistration  = ['eLdkIhe7B2yzq0skf42vsd:APA91bEMS-tq9je_7koCehDLYv26yG20HPAKtkn-lOcP5ETR5Wqs_dN9eVXRyuEj6LM4XZpgGOGewJkhycG8bY-fvQfX-cBROEtE7b9GC5Sva7D7Bl4bCm4Cl1TVdP3t5rhXcNdCNjM-']
