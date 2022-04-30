@@ -36,6 +36,7 @@
                 <div class="card-body">
                     <h3 class="title">Registration For Web Notification </h3>
                     <form method="POST">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input class="input--style-2" type="text" placeholder="Name" name="name">
                         </div>
@@ -62,8 +63,8 @@
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="class">
-                                    <option disabled="disabled" selected="selected">Country</option>
+                                <select name="county">
+                                    <option disabled="disabled" selected="selected">County</option>
                                     <option>India</option>
                                     <option>US</option>
                                     <option>UK</option>

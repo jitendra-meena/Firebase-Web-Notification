@@ -33,6 +33,12 @@ def send_notification(registration_ids , message_title , message_desc):
 
 
 def register(request):
+    if request.method=='POST':
+        name = request.POST['name']
+        gender = request.POST['gender']
+        county = request.POST['county']
+        res_code = request.POST['res_code']
+        print(name,res_code)
     return render(request,'Register.html')
 
 
