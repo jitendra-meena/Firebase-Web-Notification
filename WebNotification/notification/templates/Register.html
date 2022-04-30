@@ -35,7 +35,7 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h3 class="title">Registration For Web Notification </h3>
-                    <form method="POST">
+                    <form method="POST"  action="{% url 'register' %}">
                         {% csrf_token %}
                         <div class="input-group">
                             <input class="input--style-2" type="text" placeholder="Name" name="name">
@@ -61,6 +61,16 @@
                                 </div>
                             </div>
                         </div>
+                        {% comment %} <div class="col-md-12 col-sm-12 col-12">
+                            <div class="form-group">
+                              <select name ="race" class="form-control" required >
+                                <option value="">Select Race:</option>
+                                <option value="Asian">Asian</option>
+                                <option value="African">Caucasian</option>                          
+                                <option value="Black">Black</option>
+                              </select>
+                            </div>
+                        </div> {% endcomment %}
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="county">
