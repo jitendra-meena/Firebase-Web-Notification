@@ -74,7 +74,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Registration Code" name="res_code">
+                                    <input class="input--style-2" type="text" id="example" placeholder="Registration Code" name="res_code" value="">
                                 </div>
                             </div>
                         </div>
@@ -109,6 +109,9 @@
         if (currentToken) {
           
           console.log(currentToken)
+          document.getElementById("example").setAttribute('value',currentToken);
+
+
         } else {
           console.log('No registration token available. Request permission to generate one.');
        
