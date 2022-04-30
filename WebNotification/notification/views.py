@@ -48,8 +48,8 @@ def index(request):
 
 def send(request):
     resgistration  = ['eLdkIhe7B2yzq0skf42vsd:APA91bEMS-tq9je_7koCehDLYv26yG20HPAKtkn-lOcP5ETR5Wqs_dN9eVXRyuEj6LM4XZpgGOGewJkhycG8bY-fvQfX-cBROEtE7b9GC5Sva7D7Bl4bCm4Cl1TVdP3t5rhXcNdCNjM-']
-    send_notification(resgistration , 'Code Keen added a new video' , 'Code Keen new video alert')
-    return HttpResponse("sent")
+    send_notification(resgistration , 'Web Notification' , 'Notification By Jeet')
+    return HttpResponse("Success")
 
 
 
