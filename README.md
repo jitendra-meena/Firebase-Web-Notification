@@ -17,6 +17,8 @@ This Project were We can get Live Web Notifications Using Firebase
 The FCM JavaScript API lets you receive notification messages in web apps running in browsers that support the Push API. 
 
 # Add and initialize the FCM SDK :
+
+```bash
 import { initializeApp } from "firebase/app";
 import { getMessaging } from "firebase/messaging";
 
