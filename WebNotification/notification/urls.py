@@ -4,6 +4,6 @@ from .views import *
 urlpatterns = [
     path('' , index),
     path('register/',register,name="register"),
-    path('send/' , send),
+    path('send/' , send,name="send"),
     path('firebase-messaging-sw.js',showFirebaseJS,name="show_firebase_js"),
 ]

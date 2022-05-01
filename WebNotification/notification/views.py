@@ -1,5 +1,5 @@
 from django.http.request import HttpHeaders
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import requests
 import json
@@ -42,8 +42,8 @@ def register(request):
         birthday=datetime.datetime.strptime(birthday, '%d/%m/%Y').strftime('%Y-%m-%d')
         user = RegisterInfo.objects.create(name=name,dob=birthday,gender=gender,county=county,code_info=res_code)
         user.save()
-        
-    return render(request,'Register.html')
+        return redirect('/send/')
+    
 
 
 
@@ -53,7 +53,7 @@ def index(request):
 def send(request):
     resgistration  = ['eLdkIhe7B2yzq0skf42vsd:APA91bEMS-tq9je_7koCehDLYv26yG20HPAKtkn-lOcP5ETR5Wqs_dN9eVXRyuEj6LM4XZpgGOGewJkhycG8bY-fvQfX-cBROEtE7b9GC5Sva7D7Bl4bCm4Cl1TVdP3t5rhXcNdCNjM-']
     send_notification(resgistration , 'Web Notification' , 'Notification By Jeet')
-    return HttpResponse("Success")
+    return render(request,'success.html')
 
 
 
