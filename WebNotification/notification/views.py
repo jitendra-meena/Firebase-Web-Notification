@@ -21,7 +21,7 @@ def send_notification(registration_ids , message_title , message_desc):
             "body" : message_desc,
             "title" : message_title,
             "image" : "https://media-exp1.licdn.com/dms/image/C5603AQEBWGSDtxwgdg/profile-displayphoto-shrink_200_200/0/1628446066965?e=1656547200&v=beta&t=kKp6WMBDuFoh4u4ImKXWfpkqY-CD8-YBQnTyV2Zj-uI",
-            "icon": "https://yt3.ggpht.com/ytc/AKedOLSMvoy4DeAVkMSAuiuaBdIGKC7a5Ib75bKzKO3jHg=s900-c-k-c0x00ffffff-no-rj",
+            "icon": "https://png.pngtree.com/png-clipart/20190906/original/pngtree-c4d-cool-black-red-gold-three-dimensional-letter-j-decoration-png-image_4572647.jpg",
             
         }
     }
