@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 import json
-
-
+from .models import RegisterInfo
+import datetime
 
 def send_notification(registration_ids , message_title , message_desc):
     fcm_api = "AAAAh3gYfpE:APA91bGi3O-53aqP7drgFpvYRbvNhejTVjU4QlEZUcDJuE2nWkvKBZ0uUK7knd5W8350LKdSRHmsamnK3PO53_cNMqJtH1Ft3KPBK6I19jsjKGr0Q_-npTFMb3EFsR57d1CVDDGqhoVy"
@@ -35,10 +35,14 @@ def send_notification(registration_ids , message_title , message_desc):
 def register(request):
     if request.method=='POST':
         name = request.POST['name']
+        birthday = request.POST.get('birthday')
         gender = request.POST['gender']
         county = request.POST['county']
         res_code = request.POST['res_code']
-        print(name,res_code)
+        birthday=datetime.datetime.strptime(birthday, '%d/%m/%Y').strftime('%Y-%m-%d')
+        user = RegisterInfo.objects.create(name=name,dob=birthday,gender=gender,county=county,code_info=res_code)
+        user.save()
+        
     return render(request,'Register.html')
 
 
