@@ -101,7 +101,11 @@ def send_notification(registration_ids , message_title , message_desc):
 
 # Get Live Web Notifications : 
 
-![notification](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/reg.jpeg)
+![notification](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/success.jpeg)
 
 # Thank You Team
+  ```bash
+Jitendra Meena
+```
+
 
