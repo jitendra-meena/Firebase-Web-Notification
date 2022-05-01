@@ -96,7 +96,7 @@ def send_notification(registration_ids , message_title , message_desc):
 
 # Register User For Live Web notifications
 
-![GitHub Logo](/images/reg.png)
+![GitHub Logo](./images/reg.png)
 
 
 ```bash
