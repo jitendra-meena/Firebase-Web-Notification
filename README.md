@@ -96,14 +96,13 @@ def send_notification(registration_ids , message_title , message_desc):
 
 # Register User For Live Web notifications
 
-![GitHub Logo](images/reg.png)
+![GitHub Logo](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/reg.jpeg)
 
 
 ```bash
 
 
 ```
-![GitHub Light](https://github.com/github-light.png#gh-dark-mode-only)
 
 # Thank You Team
 
