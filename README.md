@@ -96,13 +96,12 @@ def send_notification(registration_ids , message_title , message_desc):
 
 # Register User For Live Web notifications
 
-![GitHub Logo](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/reg.jpeg)
+![Register](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/reg.jpeg)
 
 
-```bash
+# Get Live Web Notifications : 
 
-
-```
+![notification](https://github.com/jitendra-meena/Firebase-Web-Notification/blob/main/images/reg.jpeg)
 
 # Thank You Team
 
