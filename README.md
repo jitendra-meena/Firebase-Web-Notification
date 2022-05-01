@@ -103,7 +103,7 @@ def send_notification(registration_ids , message_title , message_desc):
 
 
 ```
-
+![GitHub Light](https://github.com/github-light.png#gh-dark-mode-only)
 
 # Thank You Team
 
