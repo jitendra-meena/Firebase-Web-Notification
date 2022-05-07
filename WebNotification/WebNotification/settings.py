@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'notification'
+    'notification',
+    'django_crontab'
 ]
 
 MIDDLEWARE = [
@@ -81,6 +82,9 @@ DATABASES = {
     }
 }
 
+CRONJOBS = [
+    ('*/5 * * * *', 'test_app.cron.my_scheduled_job')
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
