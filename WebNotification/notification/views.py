@@ -7,7 +7,7 @@ from .models import RegisterInfo
 import datetime
 
 def send_notification(registration_ids , message_title , message_desc):
-    fcm_api = "AAAAh3gYfpE:APA91bGi3O-53aqP7drgFpvYRbvNhejTVjU4QlEZUcDJuE2nWkvKBZ0uUK7knd5W8350LKdSRHmsamnK3PO53_cNMqJtH1Ft3KPBK6I19jsjKGr0Q_-npTFMb3EFsR57d1CVDDGqhoVy"
+    fcm_api = "AAAAh3gYfpE:APA91bGi3O-53aqP7drgFpvYRbvNhejTVjU4QlEZUcDJJJJJJuE2nWkvKBZ0uUK7knd5W8350LKdSRHmsamnK3PO53_cNMqJtH1Ft3KPBK6I19jsjKGr0Q_-npTFMb3EFsR57d1CVDDGqhoVy"
     url = "https://fcm.googleapis.com/fcm/send"
     
     headers = {
